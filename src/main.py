@@ -1,0 +1,1 @@
+print("Extractor de boletas")
