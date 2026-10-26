@@ -170,13 +170,16 @@ def procesar_carpeta(carpeta_pdf, archivo_excel):
     print(df[["archivo", "numero", "estado"]].to_string(index=False))
 
 
+
 if __name__ == "__main__":
     carpeta_proyecto = Path(__file__).resolve().parent.parent
-    carpeta_pdf = Path(__file__).resolve().parent / "data"
-    archivo_excel = carpeta_proyecto / "boletas_procesadas.xlsx"
+    carpeta_pdf = carpeta_proyecto / "data"
+    archivo_excel = carpeta_proyecto / "output" / "boletas_procesadas.xlsx"
 
-    print("Extractor de boletas - Etapa 4")
+    print("Extractor de boletas - Etapa 5")
     print(f"Carpeta de entrada: {carpeta_pdf}")
+    print(f"Archivo de salida: {archivo_excel}")
 
     procesar_carpeta(carpeta_pdf, archivo_excel)
+
 
